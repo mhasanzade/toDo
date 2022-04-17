@@ -3,8 +3,6 @@ const form = document.querySelector(".input-section");
 const input = document.querySelector("input");
 const order = document.querySelector(".change-order");
 
-
-
 function takeValue(event) {
   let inputValue = input.value;
   let items = document.createElement("div");
@@ -32,7 +30,6 @@ function takeValue(event) {
   btn.addEventListener("click", function (e) {
       items.parentNode.removeChild(items);
     },false);
-
 }
 
 function sortList() {
@@ -50,7 +47,6 @@ function sortList() {
         document.getElementById("order-desc").style.display = "block";
         if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
           shouldSwitch = true;
-
           break;
         }
       } else if (dir == "desc") {
@@ -74,17 +70,6 @@ function sortList() {
     }
   }
 }
-// input.addEventListener("keypress", function onEvent(event) {
 
-//     if (event.key === "Enter") {
-//         add.click();
-//     }
-// });
 add.addEventListener("click", takeValue);
-// add.addEventListener('click', ()=>{
-//     let line = document.createElement('hr')
-//     let clone = document.getElementById('clone_div')
-//     clone.append(line)
-// },{once:true});
-
 order.addEventListener("click", sortList);
