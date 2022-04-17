@@ -80,6 +80,7 @@ body {
   font-size: 14px;
   line-height: 16px;
   display: inline-block;
+  overflow: hidden;
 }
 hr{
   width: 90%;
